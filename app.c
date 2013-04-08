@@ -7,7 +7,7 @@
 
 struct widgets {
 	GtkWidget *window;
-} widgets;
+};
 
 void cb_quit(void)
 {
