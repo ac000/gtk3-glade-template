@@ -1,7 +1,7 @@
 APP_NAME = app
 
 CC	= gcc
-CFLAGS	= -Wall -Wextra -g -O2 -std=c99 -D_FILE_OFFSET_BITS=64 -fstack-protector-strong -fPIC
+CFLAGS	= -Wall -Wextra -Wdeclaration-after-statement -Wvla -g -O2 -std=c99 -D_FILE_OFFSET_BITS=64 -fstack-protector-strong -fPIC
 LDFLAGS	= -Wl,-z,now,-z,relro,-z,defs,--as-needed -pie
 LIBS	= $(shell pkg-config --libs gtk+-3.0 glib-2.0 gmodule-2.0)
 CFLAGS += $(shell pkg-config --cflags gtk+-3.0 glib-2.0 gmodule-2.0)
