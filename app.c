@@ -17,7 +17,7 @@ void cb_quit(void)
 static void get_widgets(struct widgets *widgets, GtkBuilder *builder)
 {
 	widgets->window = GTK_WIDGET(gtk_builder_get_object(builder,
-				     "window1"));
+							    "window1"));
 }
 
 int main(int argc, char *argv[])
