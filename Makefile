@@ -20,6 +20,10 @@ ifeq ($V,1)
 	v =
 endif
 
+ifeq ($(ASAN),1)
+        LDFLAGS += -fsanitize=address
+endif
+
 $(APP_NAME): $(objects)
 	@echo -e "  LNK\t$@"
 	$(v)$(CC) $(LDFLAGS) -o $@ $(objects) $(LIBS)
